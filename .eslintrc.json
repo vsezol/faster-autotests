@@ -278,18 +278,7 @@
         ],
         "prefer-arrow/prefer-arrow-functions": "off",
         "deprecation/deprecation": "warn",
-        "editorconfig/charset": "error",
-        "ban/ban": [
-          "error",
-          {
-            "name": "tapLog",
-            "message": "console logging is not allowed in production"
-          },
-          {
-            "name": "shareReplay",
-            "message": "causes memory leak; use [shareReplayWithRefCount] instead"
-          }
-        ]
+        "editorconfig/charset": "error"
       }
     }
   ]

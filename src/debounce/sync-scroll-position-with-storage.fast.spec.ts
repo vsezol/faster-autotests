@@ -1,18 +1,18 @@
-import { syncScrollPositionWithStorage } from "./sync-scroll-position-with-storage";
+import { syncScrollPositionWithStorage } from './sync-scroll-position-with-storage';
 
 const SYNC_DELAY_MS: number = 500;
-const STORAGE_KEY: string = "SCROLL";
+const STORAGE_KEY: string = 'SCROLL';
 
-describe("save-scroll-position", () => {
+describe('save-scroll-position', () => {
   let setItemSpy: jest.SpyInstance;
 
   beforeEach(() => {
     jest.useFakeTimers();
 
-    setItemSpy = jest.spyOn(window.localStorage.__proto__, "setItem");
+    setItemSpy = jest.spyOn(window.localStorage.__proto__, 'setItem');
   });
 
-  it("should call setItem with last position with debounce time", () => {
+  it('should call setItem with last position with debounce time', () => {
     syncScrollPositionWithStorage();
     setTimeout(() => scrollTo(11, 111), 50);
     setTimeout(() => scrollTo(22, 222), 100);
@@ -32,7 +32,7 @@ describe("save-scroll-position", () => {
 });
 
 function scrollTo(x: number, y: number): void {
-  window.dispatchEvent(new Event("scroll"));
+  window.dispatchEvent(new Event('scroll'));
   window.scrollX = x;
   window.scrollY = y;
 }
