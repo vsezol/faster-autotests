@@ -3,7 +3,7 @@ import { syncScrollPositionWithStorage } from './sync-scroll-position-with-stora
 const SYNC_DELAY_MS: number = 500;
 const STORAGE_KEY: string = 'SCROLL';
 
-describe('save-scroll-position', () => {
+describe('sync-scroll-position', () => {
   let setItemSpy: jest.SpyInstance;
 
   beforeEach(() => {

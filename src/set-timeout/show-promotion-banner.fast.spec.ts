@@ -3,7 +3,7 @@ import { showPromotionBanner } from './show-promotion-banner';
 const DELAY_MS: number = 15000;
 const TEST_TEXT: string = 'Hello!';
 
-describe('show-delayed-banner', () => {
+describe('show-promotion-banner', () => {
   let alertSpy: jest.SpyInstance;
 
   beforeEach(() => {
