@@ -10,7 +10,7 @@ describe('sync-scroll-position', () => {
     setItemSpy = jest.spyOn(window.localStorage.__proto__, 'setItem');
   });
 
-  it('should call setItem with last position with debounce time', (done: jest.DoneCallback) => {
+  it('should call setItem with last position with debounce time', (done) => {
     syncScrollPositionWithStorage();
     setTimeout(() => scrollTo(11, 111), 50);
     setTimeout(() => scrollTo(22, 222), 100);
